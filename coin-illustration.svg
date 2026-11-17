@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title">
+<title id="title">港币金币与钱币堆叠的扁平插画</title>
+<g stroke="#29251f" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M31 267H389" fill="none" stroke-width="5"/>
+  <path d="M55 242h124v23H55z" fill="#e4a228" stroke-width="4"/>
+  <ellipse cx="117" cy="242" rx="62" ry="13" fill="#ffdb70" stroke-width="4"/>
+  <path d="M61 218h112v23H61z" fill="#e4a228" stroke-width="4"/>
+  <ellipse cx="117" cy="218" rx="56" ry="12" fill="#ffe18d" stroke-width="4"/>
+  <path d="M66 195h102v22H66z" fill="#e4a228" stroke-width="4"/>
+  <ellipse cx="117" cy="195" rx="51" ry="11" fill="#ffe18d" stroke-width="4"/>
+  <path d="M252 240h115v25H252z" fill="#e4a228" stroke-width="4"/>
+  <ellipse cx="309.5" cy="240" rx="57.5" ry="12" fill="#ffe18d" stroke-width="4"/>
+  <path d="M257 217h105v22H257z" fill="#e4a228" stroke-width="4"/>
+  <ellipse cx="309.5" cy="217" rx="52.5" ry="11" fill="#ffe18d" stroke-width="4"/>
+  <circle cx="211" cy="121" r="91" fill="#df9b22" stroke-width="6"/>
+  <circle cx="205" cy="113" r="91" fill="#ffe08b" stroke-width="6"/>
+  <circle cx="205" cy="113" r="73" fill="none" stroke-width="3"/>
+  <path d="M169 63c11-10 24-15 38-16" fill="none" stroke="#fff8db" stroke-width="8"/>
+  <path d="M161 170c-10-8-17-17-22-28" fill="none" stroke="#e4a228" stroke-width="6"/>
+  <path d="M169 119h72M169 133h72" fill="none" stroke-width="4"/>
+  <text x="205" y="111" text-anchor="middle" fill="#29251f" stroke="none" font-family="Arial, sans-serif" font-size="47" font-weight="800">HK$</text>
+  <path d="M39 95l6-14 6 14 14 6-14 6-6 14-6-14-14-6z" fill="#fff8e8" stroke-width="3"/>
+  <path d="M353 61l6-14 6 14 14 6-14 6-6 14-6-14-14-6z" fill="#fff8e8" stroke-width="3"/>
+  <path d="M368 145l4-10 4 10 10 4-10 4-4 10-4-10-10-4z" fill="#fff8e8" stroke-width="3"/>
+</g>
+</svg>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8e8">
+  <meta name="description" content="自在赚钱可视化：给你的小小赚钱冒险地图。">
+  <title>自在赚钱可视化 · 给你的赚钱小站</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="自在赚钱可视化，返回顶部"><span class="brand-icon">¥</span><span>自在赚钱<span class="brand-thin">可视化</span></span></a>
+      <div class="header-actions"><span class="clock-chip" id="clockLabel">北京时间</span><button class="outline-button small" id="openSettings" type="button">⚙ 设置</button></div>
+    </header>
+
+    <main id="top">
+      <section class="hero frame" aria-labelledby="heroTitle">
+        <div class="coin-rain" id="coinRain" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <div class="hero-sticker" id="heroFor">给你的赚钱小站</div>
+          <h1 id="heroTitle">今天又赚到</h1>
+          <div class="income-ticket" aria-label="今日实时收入"><span class="income-label"><i></i> 今日实时进账</span><div class="income-value"><span>HK$</span><strong id="todayHkd">0.00</strong></div></div>
+          <p class="hero-greeting" id="heroGreeting">今天也在一点点靠近想要的生活。</p>
+          <div class="hero-rmb">折合人民币 <strong id="todayRmb">¥0.00</strong> <span id="rateNote">演示汇率 0.9</span></div>
+          <div class="hero-goal" aria-label="当前心愿进度"><div class="hero-goal-top"><span id="heroGoalName">银白色 iPhone 18 Pro</span><strong id="heroGoalPercent">0.0%</strong></div><div class="hero-goal-track" role="progressbar" aria-label="当前心愿购买进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="heroGoalProgress"><span id="heroGoalFill"></span></div><small id="heroGoalRemaining">距离买到还差 ¥12,000</small></div>
+          <div class="hero-bottom"><span class="status-pill" id="earningStatus">正在计算</span><button class="text-button" id="coinButton" type="button">再来一场金币雨 ↗</button></div>
+        </div>
+        <div class="hero-side">
+          <img class="coin-art" src="./coin-illustration.svg" alt="港币金币与钱币堆叠的扁平插画">
+          <div class="countdown-card"><span class="countdown-label" id="countdownLabel">距离下班</span><strong id="countdownValue">00:00:00</strong><span class="countdown-end" id="countdownEnd">今天 18:00 下班</span></div>
+        </div>
+      </section>
+
+      <section class="summary-grid" aria-label="收入概览">
+        <article class="metric-card frame"><div class="metric-icon">↗</div><span>从开始日期累计赚得</span><strong id="totalHkd">HK$0.00</strong><small id="totalDays">0 个工作日</small></article>
+        <article class="metric-card frame"><div class="metric-icon">￥</div><span>折合人民币</span><strong id="totalRmb">¥0.00</strong><small>按当前填写的汇率估算</small></article>
+        <article class="metric-card frame"><div class="metric-icon">◷</div><span>今日计薪进度</span><strong id="workPercent">0%</strong><small id="workTimeLeft">尚未开始</small></article>
+      </section>
+
+      <section class="goal-section frame" aria-labelledby="goalTitle">
+        <div class="section-head"><div><span class="section-number">01 / 心愿地图</span><h2 id="goalTitle">我的两站心愿</h2></div><span class="goal-stage-chip" id="goalStageChip">第 1 站</span></div>
+        <div class="stage-rail" aria-label="阶段目标"><div class="stage-node active" id="stageOneNode"><span>01</span><strong id="stageOneName">银白色 iPhone 18 Pro</strong><small id="stageOneState">正在努力</small></div><div class="stage-line"></div><div class="stage-node" id="stageTwoNode"><span>02</span><strong id="stageTwoName">下一站的心愿</strong><small id="stageTwoState">等待开启</small></div></div><p class="stage-archive" id="stageArchive" hidden></p>
+        <div class="goal-layout">
+          <div class="goal-details"><div class="goal-eyebrow" id="goalEyebrow">当前目标 · 第 1 站</div><h3 id="currentGoalName">银白色 iPhone 18 Pro</h3><div class="goal-amounts"><div><span>距离目标还差</span><strong id="goalRemaining">¥12,000</strong></div><div><span>目标金额</span><strong id="goalTarget">¥12,000</strong></div></div><div class="progress-top"><span>当前进度</span><strong id="goalPercent">0.0%</strong></div><div class="progress-track" id="goalProgress" role="progressbar" aria-label="当前目标进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progressFill"></div></div><p class="progress-caption" id="progressCaption">本阶段已赚 ¥0.00 · 工资估算，不扣除支出</p><div class="goal-actions"><button class="solid-button" id="completeStage" type="button">手机买到啦，开启下一站 →</button><span id="goalActionHint">买到手机后再点，下一站会从 ¥0 开始</span></div></div>
+        </div>
+      </section>
+
+      <div class="lower-grid">
+        <section class="panel frame" aria-labelledby="todayTitle"><div class="panel-head"><div><span class="section-number">02 / 今天</span><h2 id="todayTitle">今天的赚钱时间表</h2></div><span class="panel-date" id="todayDate"></span></div><div class="time-list"><div class="time-item"><span class="time-dot"></span><strong id="startTimeText">09:00</strong><span>开始上班</span></div><div class="time-item"><span class="time-dot"></span><strong id="breakTimeText">12:00 – 13:00</strong><span>午休，暂停计薪</span></div><div class="time-item"><span class="time-dot"></span><strong id="endTimeText">18:00</strong><span>正常下班</span></div><div class="time-item"><span class="time-dot"></span><strong id="overtimeTimeText">18:00 – 20:00</strong><span>加班时段</span></div></div><div class="overtime-control"><div><strong>今天加班吗？</strong><small id="overtimeHint">开启后，加班费会逐秒累计</small></div><label class="switch"><input id="todayOvertime" type="checkbox" aria-label="今天加班"><span></span></label></div></section>
+        <section class="panel frame" aria-labelledby="calendarTitle"><div class="panel-head"><div><span class="section-number">03 / 补记</span><h2 id="calendarTitle">赚钱日历</h2></div><div class="month-nav"><button id="prevMonth" type="button" aria-label="上个月">‹</button><strong id="calendarMonth"></strong><button id="nextMonth" type="button" aria-label="下个月">›</button></div></div><div class="calendar-weekdays" aria-hidden="true"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div><div class="calendar-grid" id="calendarGrid" role="grid" aria-label="工作记录日历"></div><div class="calendar-legend"><span><i class="legend-work"></i>上班</span><span><i class="legend-extra"></i>加班</span><span><i class="legend-off"></i>休息</span></div><div class="day-editor"><div><strong id="selectedDateLabel">选择日期</strong><small id="selectedDateInfo">可补记加班、请假或额外上班</small></div><div class="day-editor-actions"><label class="sr-only" for="dayStatus">日期状态</label><select id="dayStatus"><option value="default">按每周安排</option><option value="work">额外上班</option><option value="off">请假 / 不上班</option></select><label class="check-label"><input id="dayOvertime" type="checkbox"> 加班</label></div></div></section>
+      </div>
+      <footer class="site-footer"><span>自在赚钱可视化</span><span id="signatureText">只属于你的赚钱小站</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="settingsBackdrop" hidden><div class="settings-dialog frame" role="dialog" aria-modal="true" aria-labelledby="settingsTitle"><div class="dialog-head"><div><span class="section-number">专属设置</span><h2 id="settingsTitle">把这里变成你们的版本</h2></div><button class="close-button" id="closeSettings" type="button" aria-label="关闭设置">×</button></div><form id="settingsForm"><section class="form-section"><h3>写给他的</h3><div class="form-grid"><label>他的昵称<input name="nickname" type="text" maxlength="20" placeholder="例如：阿哲"></label><label>你的落款<input name="signature" type="text" maxlength="20" placeholder="例如：来自小橘"></label><label class="span-two">首页的一句话<input name="greeting" type="text" maxlength="80" placeholder="今天也在一点点靠近想要的生活。"></label></div></section><section class="form-section"><h3>两站心愿</h3><div class="form-grid"><label>第 1 站名称<input name="goalOneName" type="text" maxlength="50" required></label><label>第 1 站金额 · 人民币<input name="goalOneAmount" type="number" min="0.01" step="0.01" required></label><label>第 2 站名称<input name="goalTwoName" type="text" maxlength="50" required></label><label>第 2 站金额 · 人民币<input name="goalTwoAmount" type="number" min="0.01" step="0.01" required></label></div><p class="field-note" id="stageSettingsNote">买到第 1 站的心愿后，手动开启第 2 站，进度从零开始。</p></section><section class="form-section"><h3>工资与时间</h3><div class="form-grid"><label>每日正常工资 · 港币<input name="basePay" type="number" min="0" step="0.01" required></label><label>每日加班费 · 港币<input name="overtimePay" type="number" min="0" step="0.01" required></label><label>汇率 · 1 港币等于多少人民币<input name="rate" type="number" min="0.000001" step="any" required></label><label>累计开始日期<input name="startDate" type="date" required></label><label>上班时间<input name="startTime" type="time" required></label><label>正常下班<input name="endTime" type="time" required></label><label>午休开始<input name="breakStart" type="time" required></label><label>午休结束<input name="breakEnd" type="time" required></label><label>加班结束<input name="overtimeEnd" type="time" required></label></div><p class="field-note">初始汇率 0.9 仅供演示。修改工资或汇率会重新估算当前阶段的进度。</p></section><section class="form-section"><h3>每周上班日</h3><div class="weekday-settings" id="weekdaySettings"></div></section><section class="form-section"><h3>整数奖励</h3><p class="field-note">当天港币收入跨过这些金额时，在网页里提醒一次。</p><div class="milestone-settings" id="milestoneSettings"></div></section><p class="form-error" id="formError" role="alert" hidden></p><div class="form-actions"><button class="outline-button" id="cancelSettings" type="button">取消</button><button class="solid-button" type="submit">保存设置</button></div></form><div class="backup-box"><div><strong>数据备份</strong><p>记录只存在当前浏览器。换设备前请导出，再在新设备导入。</p></div><div class="backup-actions"><button id="exportData" type="button">↓ 导出</button><button id="importData" type="button">↑ 导入</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div></div></div>
+  <div class="modal-backdrop" id="confirmBackdrop" hidden><div class="confirm-dialog frame" role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><span class="confirm-emoji">🎉</span><h2 id="confirmTitle">手机买到啦？</h2><p>确认后，第 1 站会存入完成记录；第 2 站从此刻的 <strong>¥0、0%</strong> 开始。之前多赚的金额不会结转。</p><div class="confirm-actions"><button class="outline-button" id="cancelStage" type="button">先等等</button><button class="solid-button" id="confirmStage" type="button">确认，开启下一站</button></div></div></div>
+  <div class="milestone-toast frame" id="milestoneToast" role="status" aria-live="polite" hidden><span class="milestone-icon">★</span><div><strong id="milestoneTitle">赚到 HK$300 啦</strong><p id="milestoneMessage"></p></div><button id="closeMilestone" type="button" aria-label="关闭提醒">×</button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

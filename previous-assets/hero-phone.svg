@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title">
+<title id="title">银白色手机和金币</title>
+<g fill="none" stroke="#29251f" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M31 270h358" stroke-width="5"/>
+  <path d="M39 258h115v12H39z" fill="#d89b22" stroke-width="4"/>
+  <ellipse cx="96.5" cy="258" rx="57.5" ry="11" fill="#ffe69a" stroke-width="4"/>
+  <path d="M45 238h103v18H45z" fill="#d89b22" stroke-width="4"/>
+  <ellipse cx="96.5" cy="238" rx="51.5" ry="10" fill="#ffe69a" stroke-width="4"/>
+  <path d="M49 218h95v18H49z" fill="#d89b22" stroke-width="4"/>
+  <ellipse cx="96.5" cy="218" rx="47.5" ry="10" fill="#ffe69a" stroke-width="4"/>
+  <path d="M202 27c2-12 13-20 26-18l121 22c13 2 21 13 19 26l-38 207c-2 13-13 21-26 19l-121-22c-13-2-21-13-19-26z" fill="#f1f3ef" stroke-width="6"/>
+  <path d="M211 36c1-9 8-15 18-13l112 20c9 1 15 8 13 18l-36 195c-1 10-9 15-18 14l-111-21c-10-1-16-9-14-18z" stroke="#b9c1bf" stroke-width="2.5"/>
+  <path d="M229 23l118 21" stroke="#fff" stroke-width="4"/>
+  <circle cx="211" cy="65" r="17" fill="#d9e2e1" stroke-width="3"/><circle cx="211" cy="65" r="9" fill="#364344" stroke-width="2"/>
+  <circle cx="253" cy="72" r="17" fill="#d9e2e1" stroke-width="3"/><circle cx="253" cy="72" r="9" fill="#364344" stroke-width="2"/>
+  <circle cx="204" cy="108" r="17" fill="#d9e2e1" stroke-width="3"/><circle cx="204" cy="108" r="9" fill="#364344" stroke-width="2"/>
+  <circle cx="248" cy="111" r="4" fill="#9fa9a7" stroke="none"/>
+  <path d="M254 167c7-7 18-5 19 5 1 11-11 16-18 22-7-6-18-12-17-22 1-10 11-13 16-5z" fill="#cbd2cf" stroke="none"/>
+  <circle cx="113" cy="127" r="63" fill="#d99d29" stroke-width="5"/>
+  <circle cx="107" cy="121" r="63" fill="#ffe49a" stroke-width="5"/>
+  <circle cx="107" cy="121" r="49" stroke-width="2.5"/>
+  <text x="107" y="134" fill="#29251f" stroke="none" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" font-weight="800">HK$</text>
+  <path d="M42 58l5-12 5 12 12 5-12 5-5 12-5-12-12-5z" fill="#fff8e8" stroke-width="3"/>
+  <path d="M365 112l4-10 4 10 10 4-10 4-4 10-4-10-10-4z" fill="#fff8e8" stroke-width="3"/>
+  <path d="M356 207l4-10 4 10 10 4-10 4-4 10-4-10-10-4z" fill="#fff8e8" stroke-width="3"/>
+</g>
+</svg>
